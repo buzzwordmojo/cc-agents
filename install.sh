@@ -98,8 +98,8 @@ install_stack() {
         exit 1
     fi
     
-    # Parse agents from JSON (basic parsing, assumes clean format)
-    local agents=$(echo "$stack_config" | grep -o '"[^"]*"' | grep -v '^"name"\|^"description"\|^"stack"\|^"customizations"' | sed 's/"//g' | grep -v '^$')
+    # Parse agents from JSON (extract only from agents array)
+    local agents=$(echo "$stack_config" | sed -n '/"agents":/,/]/p' | grep -o '"[^"]*"' | grep -v '"agents"' | sed 's/"//g' | grep -v '^$')
     
     print_info "Installing $(echo "$agents" | wc -l) agents for $stack stack..."
     echo
@@ -121,6 +121,9 @@ install_stack() {
                 ;;
             "clerk-auth-specialist")
                 download_agent "clerk-auth-specialist" "clerk-auth-specialist.md"
+                ;;
+            "shadcn-specialist")
+                download_agent "tailwind-stylist" "shadcn-specialist.md"
                 ;;
             *)
                 download_agent "$agent" "${agent}.md"
