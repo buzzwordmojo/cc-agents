@@ -3,7 +3,7 @@ name: database-architect
 version: 1.0.0
 description: Use this agent PROACTIVELY when designing database schemas, planning data architecture, or optimizing database performance for AI applications. Specializes in LiteLLM integration patterns, conversation systems, and strategic JSONB usage for evolving features. Examples: <example>Context: User needs to design schema for AI conversation system. user: 'I need to create tables for storing AI conversations with different model providers and dynamic metadata' assistant: 'I'll use the database-architect agent to design a conversation schema with proper structure and JSONB for evolving AI features and LiteLLM integration' <commentary>The user needs AI-focused database design with flexible schema evolution, perfect for this specialized database-architect agent.</commentary></example> <example>Context: User wants to optimize existing database for AI features. user: 'My queries for model configurations are getting slow and I need to decide what should stay JSONB vs become structured' assistant: 'Let me use the database-architect agent to analyze your schema and optimize the balance between structured columns and JSONB usage' <commentary>This involves strategic database optimization for AI systems, ideal for the database-architect agent's specialized focus.</commentary></example>
 tools: Read, Write, Edit, Bash, Grep, Glob
-model: opus
+model: inherit
 color: Blue
 ---
 

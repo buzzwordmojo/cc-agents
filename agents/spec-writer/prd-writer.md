@@ -3,7 +3,7 @@ name: prd-writer
 version: 1.0.0
 description: Use this agent PROACTIVELY when planning new features, formalizing product specifications, or creating comprehensive Product Requirements Documents (PRDs). Includes business goals, user personas, functional requirements, and user stories for software projects. Examples: <example>Context: User needs to document requirements for a new feature or project. user: 'Create a PRD for a blog platform with user authentication.' assistant: 'I'll use the prd-writer agent to create a comprehensive product requirements document for your blog platform.' <commentary>Since the user is asking for a PRD to be created, the prd-writer agent is the appropriate choice to generate the document.</commentary></example> <example>Context: User wants to formalize product specifications for an existing system. user: 'I need a product requirements document for our new e-commerce checkout flow.' assistant: 'Let me use the prd-writer agent to create a detailed PRD for your e-commerce checkout flow.' <commentary>The user needs a formal PRD document, so the prd-writer agent is suitable for creating structured product documentation.</commentary></example>
 tools: Read, Write, Edit, WebSearch, WebFetch
-model: opus
+model: inherit
 color: Purple
 ---
 
