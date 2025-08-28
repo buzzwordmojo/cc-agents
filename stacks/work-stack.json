@@ -1,0 +1,32 @@
+{
+  "name": "Work Stack",
+  "description": "FastAPI + Next.js + PostgreSQL + Azure + AI Focus",
+  "stack": {
+    "backend": "FastAPI + Pydantic + SQLAlchemy",
+    "frontend": "Next.js + TypeScript + shadcn/ui + Tailwind",
+    "database": "PostgreSQL with strategic JSONB usage",
+    "deployment": "Azure",
+    "auth": "Custom JWT",
+    "focus": "AI applications with LiteLLM integration"
+  },
+  "agents": [
+    "spec-writer",
+    "fastapi-engineer", 
+    "nextjs-developer",
+    "database-architect",
+    "pydantic-validator",
+    "shadcn-specialist",
+    "playwright-tester",
+    "api-tester",
+    "bug-investigator",
+    "clickup-manager"
+  ],
+  "customizations": {
+    "database-architect": {
+      "focus": "AI applications with PostgreSQL and strategic JSONB"
+    },
+    "nextjs-developer": {
+      "focus": "AI chat interfaces and conversation UX"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Personal Stack", 
+  "description": "Next.js + Convex + shadcn/ui + Clerk",
+  "stack": {
+    "backend": "Convex (full-stack TypeScript)",
+    "frontend": "Next.js + TypeScript + shadcn/ui + Tailwind", 
+    "database": "Convex built-in database",
+    "deployment": "Vercel + Convex Cloud",
+    "auth": "Clerk",
+    "focus": "Rapid prototyping and personal projects"
+  },
+  "agents": [
+    "spec-writer",
+    "convex-engineer",
+    "nextjs-developer", 
+    "clerk-auth-specialist",
+    "shadcn-specialist",
+    "playwright-tester",
+    "bug-investigator"
+  ],
+  "customizations": {
+    "nextjs-developer": {
+      "focus": "Convex integration and real-time features"
+    },
+    "convex-engineer": {
+      "focus": "Full-stack TypeScript with Convex database and functions"
+    }
+  }
+}
