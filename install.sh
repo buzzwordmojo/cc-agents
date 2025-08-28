@@ -98,10 +98,17 @@ install_stack() {
         exit 1
     fi
     
-    # Parse agents from JSON (extract only from agents array)
+    # Parse agents from JSON (extract only from agents array)  
     local agents=$(echo "$stack_config" | sed -n '/"agents":/,/]/p' | grep -o '"[^"]*"' | grep -v '"agents"' | sed 's/"//g' | grep -v '^$')
     
-    print_info "Installing $(echo "$agents" | wc -l) agents for $stack stack..."
+    # Count agents properly
+    local agent_count=$(echo "$agents" | wc -w)
+    print_info "Installing $agent_count agents for $stack stack..."
+    
+    # Debug output
+    if [[ "$DEBUG" == "1" ]]; then
+        print_info "Agents to install: $agents"
+    fi
     echo
     
     # Install each agent
